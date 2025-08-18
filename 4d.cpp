@@ -2,12 +2,23 @@
 using namespace std;
 int main(){
   string name;
-  cin.ingore();
+  cin.ignore();
   getline(cin,name);
-  int x=name.length;
+  int x=name.length();
   for(int i=0;i<x;i++){
-    if(
+    for(int j=i+1;j<x;j++){
+      
+      if((int)name[i]>(int)name[j]){
+        char temp;
+        temp=name[i];
+        name[i]=name[j];
+        name[j]=temp;
+      }
+
+        }   
+       
   }
+  cout<<name;
 
   
 }
